@@ -19,7 +19,7 @@ Input Format
 
 Output Format
     Print the sum of both integers on the first line, the sum of both doubles (scaled to 1  decimal place) on the second line, and then the two concatenated strings on the third line.
-"""
+
 i = 4
 d = 4.0
 s = 'HackerRank '
@@ -33,3 +33,28 @@ s = 'HackerRank '
 
 # Concatenate and print the String variables on a new line
 # The 's' variable above should be printed first.
+"""
+# troubleshooting
+i = 4
+d = 4.0
+s = "HackerRank "
+# Declare second integer, double, and String variables.
+x = int(input())            #12
+y = float(input())          #4.0
+z = input()                 #is the best place to learn and practice coding!
+
+# Read and save an integer, double, and String to your variables.
+
+suma_i = i + x
+suma_d = d + y
+concat = s + z
+
+# Print the sum of both integer variables on a new line.
+print(suma_i)               # 16
+
+# Print the sum of the double variables on a new line.
+print(suma_d)               # 8.0
+
+# Concatenate and print the String variables on a new line
+# The 's' variable above should be printed first.
+print(concat)               # HackerRank is the best place to learn and practice coding!
