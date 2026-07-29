@@ -21,3 +21,18 @@ Constraints
 Output Format
     On a new line for each query, print Not found if the name has no corresponding entry in the phone book; otherwise, print the full name and phone number in the format name=phoneNumber.
 """
+n = int(input())                                    #number of entries in the phone book
+phone_book = {}                                     #dictionary to store the phone book entries
+for _ in range(n):
+    name, phone = input().split()                   #split the input line into name and phone number
+    phone_book[name] = phone                        #store the name and phone number in the dictionary
+
+while True:
+    try:
+        query = input()
+        if query in phone_book:
+            print(f"{query}={phone_book[query]}")
+        else:
+            print("Not found")
+    except EOFError:
+        break
