@@ -3,7 +3,7 @@ Objective
     Today we will expand our knowledge of strings, combining it with what we have already learned about loops.
 
 Task
-    Given a string, S, of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line (see the Sample below for more detail).
+    Given a string, S, of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
     Note: 0 is considered to be an even index.
 
 Example
@@ -24,3 +24,13 @@ Output Format
 Initial Code
     # Enter your code here. Read input from STDIN. Print output to STDOUT
 """
+#Troubleshooting
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+if __name__ == '__main__':
+    T = int(input().strip())
+    for i in range(T):
+        S = input().strip()
+        even_chars = S[::2]  # Characters at even indices
+        odd_chars = S[1::2]  # Characters at odd indices
+        print(f"{even_chars} {odd_chars}")
