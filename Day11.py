@@ -50,3 +50,38 @@ Initial Code
         for _ in range(6):
             arr.append(list(map(int, input().rstrip().split())))
 """
+#This ia a solution
+#!/bin/python3
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+
+    arr = []
+
+    # Read the 6x6 matrix
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    # List to store all hourglass sums
+    hourglass_sums = []
+
+    # Iterate over possible positions
+    for i in range(4):          # rows 0 to 3
+        for j in range(4):      # columns 0 to 3
+            # Calculate the hourglass sum
+            top = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+            middle = arr[i+1][j+1]
+            bottom = arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+            total = top + middle + bottom
+
+            hourglass_sums.append(total)
+
+    # Print all hourglass sums
+    print("All hourglass sums:", hourglass_sums)
+
+    # Print the maximum sum
+    print("Maximum sum:", max(hourglass_sums))
