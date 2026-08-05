@@ -111,6 +111,7 @@ class Student(Person):
             return 'D'
         else:
             return 'T'
+        
 line = input().split()
 firstName = line[0]
 lastName = line[1]
